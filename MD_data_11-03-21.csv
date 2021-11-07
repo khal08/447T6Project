@@ -1,0 +1,26 @@
+date,county,state,fips,cases,deaths
+11/3/2021,Allegany,Maryland,24001,9865,253
+11/3/2021,Anne Arundel,Maryland,24003,53332,770
+11/3/2021,Baltimore,Maryland,24005,77162,1851
+11/3/2021,Baltimore city,Maryland,24510,61906,1350
+11/3/2021,Calvert,Maryland,24009,5749,101
+11/3/2021,Caroline,Maryland,24011,3246,51
+11/3/2021,Carroll,Maryland,24013,11892,290
+11/3/2021,Cecil,Maryland,24015,8928,181
+11/3/2021,Charles,Maryland,24017,14571,260
+11/3/2021,Dorchester,Maryland,24019,4175,82
+11/3/2021,Frederick,Maryland,24021,24450,379
+11/3/2021,Garrett,Maryland,24023,3306,81
+11/3/2021,Harford,Maryland,24025,20920,357
+11/3/2021,Howard,Maryland,24027,22746,278
+11/3/2021,Kent,Maryland,24029,1742,56
+11/3/2021,Montgomery,Maryland,24031,82747,1716
+11/3/2021,Prince George's,Maryland,24033,100068,1727
+11/3/2021,Queen Anne's,Maryland,24035,3924,72
+11/3/2021,Somerset,Maryland,24039,3374,54
+11/3/2021,St. Mary's,Maryland,24037,10040,164
+11/3/2021,Talbot,Maryland,24041,2887,54
+11/3/2021,Unknown,Maryland,,0,49
+11/3/2021,Washington,Maryland,24043,19876,406
+11/3/2021,Wicomico,Maryland,24045,11183,224
+11/3/2021,Worcester,Maryland,24047,5038,119
