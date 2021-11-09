@@ -1,0 +1,9 @@
+# GITIGNORE files tell Git to not include certain files in the repository.
+# This usually includes compiler/runtime output, junk files, and other things which have no purpose being shared/uploaded
+# Feel free to expand/edit this list
+
+
+
+# Ignore IDE junk
+.vs
+.vscode

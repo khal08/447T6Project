@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+	<head>
+		<title>COVID Map</title>
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+			  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+			  crossorigin="" />
+		<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+				integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+				crossorigin=""></script>
+
+		<link rel="stylesheet" href="styles.css" />
+		<script src="scripts.js"></script>
+
+		<style>
+			body {
+				display: flex;
+				flex-direction: column;
+				margin: 0px;
+			}
+			.header {
+				flex: 0;
+				min-height: min-content;
+			}
+			.content {
+				flex: 1;
+				display: flex;
+				flex-direction: row;
+			}
+			.leafmap {
+				flex: 3;
+				height: 100%;
+			}
+			.leafmap-sidebar {
+				flex: 1;
+				height: 100%;
+				min-width: 350px; /* TODO: Replace with min-content once this div has stuff in it */
+			}
+		</style>
+	</head>
+	
+	<body>
+		<nav class="header">
+
+		</nav>
+
+		<div class="content">
+			<div id="map-main" class="leafmap"></div>
+
+			<div class="leafmap-sidebar">
+
+			</div>
+		</div>
+		
+		<script>
+			var map_main = L.map("map-main").setView([39.0458, -76.6413], 8);
+
+			L.control.layers(
+				{
+					"Streets": getMapboxTiles("streets-v11").addTo(map_main),
+					"Outdoors": getMapboxTiles("outdoors-v11"),
+					"Light": getMapboxTiles("light-v10"),
+					"Dark": getMapboxTiles("dark-v10"),
+					"Satellite": getMapboxTiles("satellite-v9"),
+					"Satellite Streets": getMapboxTiles("satellite-streets-v11"),
+					"Navigation Day": getMapboxTiles("navigation-day-v1"),
+					"Navigation Night": getMapboxTiles("navigation-night-v1"),
+				}).addTo(map_main);
+		</script>
+	</body>
+</html>
