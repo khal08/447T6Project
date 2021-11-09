@@ -1,3 +1,7 @@
+/*
+ * Returns an L.tileLayer() of the specified type from Mapbox.
+ * This is a convenience method that handles setting all the proper settings for the tiles
+ */
 function getMapboxTiles(map_type)
 {
 	return L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{type}/tiles/{z}/{x}/{y}?access_token={token}",

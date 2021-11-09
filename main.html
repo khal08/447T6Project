@@ -17,35 +17,34 @@
 		<script src="scripts.js"></script>
 
 		<style>
-			html, body
-			{
-				height: 100%;
+			html, body {
+				height: 100%; /* This makes the page conform to the user's vertical screen space */
 			}
 			body {
 				margin: 0px;
-				display: flex;
+				display: flex; /* Making the body into a vertical flexbox allows the height of the page-content to fit the screen size */
 				flex-direction: column;
 				align-items: stretch;
 			}
 			.header {
 				flex: 0;
-				min-height: min-content;
+				min-height: min-content; /* Header has a fixed height */
 				border-bottom: 1px solid black;
 			}
 			.page-content {
-				flex: 1;
+				flex: 1; /* Page content takes up all vertical space not being used by the header */
 				display: flex;
-				flex-direction: row;
+				flex-direction: row; /* The page content is itself a (horizontal) flexbox */
 				align-items: stretch;
 			}
 			.leafmap {
 				height: 100%;
-				flex: 3;
+				flex: 3; /* The leafmap will take up 3/4ths of the horizontal space of the page */
 			}
 			.leafmap-sidebar {
 				height: 100%;
-				min-width: 350px; /* TODO: Replace with min-content once this div has stuff in it */
-				flex: 1;
+				min-width: 350px; /* Don't let the sidebar shrink too much, TODO: Replace with min-content once the sidebar has stuff in it */
+				flex: 1; /* The sidebar will take up 1/4ths of the horizontal space of the page */
 			}
 		</style>
 	</head>
@@ -63,15 +62,16 @@
 
 			<!-- The right info panel -->
 			<div class="leafmap-sidebar">
+				<!-- TODO -->
 			</div>
 		</div>
 		
 		<script>
-			var map_main = L.map("map-main").setView([39.0458, -76.6413], 8);
+			var map_main = L.map("map-main").setView([39.0458, -76.6413], 8); // TODO: Maybe replace this setView with something not-hardcoded
 
 			L.control.layers(
 				{
-					"Streets": getMapboxTiles("streets-v11").addTo(map_main),
+					"Streets": getMapboxTiles("streets-v11").addTo(map_main), // This one's the default
 					"Outdoors": getMapboxTiles("outdoors-v11"),
 					"Light": getMapboxTiles("light-v10"),
 					"Dark": getMapboxTiles("dark-v10"),
