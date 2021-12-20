@@ -1,4 +1,4 @@
-install requirements 
+install requirements for db
 
 Configure database (must be done for each persons system as this program is hosted locally):
 
